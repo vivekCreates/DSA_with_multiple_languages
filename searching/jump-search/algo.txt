@@ -1,0 +1,3 @@
+1. find the steps =  square root of length of array
+2. while until Jump in steps until arr[min(step, n) - 1] >= target
+3. Do linear search in the block [prev, step]
