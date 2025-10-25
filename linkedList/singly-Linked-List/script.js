@@ -51,6 +51,16 @@ class List{
         this.tail.next = null;
     }
 
+    insertAt(pos,val){
+        let newNode = new Node(val);
+        let temp = this.head;
+        for (let i = 1; i < pos-1; i++) {
+            temp  = temp.next;
+        }
+        newNode.next = temp.next; 
+        temp.next = newNode;   
+    }
+
     printList(){
         let temp = this.head;
         while(temp){
@@ -67,6 +77,5 @@ l1.pushFront(20)
 l1.pushFront(30)
 l1.pushBack(40)
 l1.pushBack(50)
-l1.popFront()
-l1.popBack()
+l1.insertAt(2,100)
 l1.printList()
