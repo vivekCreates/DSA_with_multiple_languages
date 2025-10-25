@@ -62,7 +62,12 @@ class List:
     
     def clear(self):
         self.head = self.tail = None
-  
+        
+    def is_empty(self):
+        if not self.head:
+            return True
+        else:
+            return False
 l1 = List()
 
 
@@ -74,4 +79,5 @@ l1.pop_back()
 l1.insert_at(2,100)
 l1.print_list()
 
+print(l1.is_empty())
 print(l1.size())
