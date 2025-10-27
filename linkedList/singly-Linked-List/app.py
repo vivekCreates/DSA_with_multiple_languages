@@ -28,6 +28,12 @@ class List:
             self.tail = newNode
       
     def pop_front(self):
+        if not self.head:
+            print("List is empty")
+            return
+        if self.head == self.tail:
+            self.head = self.tail = None
+            return
         temp = self.head
         self.head = temp.next
         
@@ -68,16 +74,22 @@ class List:
             return True
         else:
             return False
+        
+        
+        
 l1 = List()
 
 
 l1.push_front(1)
-l1.push_front(2)
-l1.push_back(3)
 l1.pop_front()
-l1.pop_back()
-l1.insert_at(2,100)
+# l1.push_front(2)
+# l1.push_back(3)
+# l1.pop_front()
+# l1.pop_back()
+# l1.insert_at(1,100)
 l1.print_list()
 
+print(l1.head.data)
+print(l1.tail.data)
 print(l1.is_empty())
 print(l1.size())
